@@ -9,7 +9,7 @@ game:GetService("UserInputService").InputBegan:Connect(function(key, gpe)
           tr = true
           for i, v in pairs(game.Players:GetPlayers()) do
               local char = game.Players.LocalPlayer.Character
-              if v.Name ~= char.Name and (v.Character.HumanoidRootPart.CFrame.p - char.HumanoidRootPart.CFrame.p).Magnitude < 65 then
+              if v.Name ~= char.Name and (v.Character.HumanoidRootPart.CFrame.p - char.HumanoidRootPart.CFrame.p).Magnitude < 29 then
                   while tr == true do
                       if v.Character.HumanoidRootPart.Velocity.magnitude > 0.5 and v.Character:FindFirstChild("Basketball") then
                           char.Humanoid:MoveTo(v.Character.HumanoidRootPart.CFrame.p + v.Character.HumanoidRootPart.Velocity.unit * 7)
