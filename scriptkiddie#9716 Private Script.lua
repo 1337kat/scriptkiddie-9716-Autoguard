@@ -113,7 +113,7 @@ local player
 function updateNearestPlayerWithBall()
     local dist = 9e9
     for i,v in pairs(game.Players:GetPlayers()) do
-        if v.Name ~= plr.Name and v.Character and v.Character:FindFirstChild("Basketball") and not plr.Character:FindFirstChild("Basketball") and (plr.Character.Torso.Position - v.Character.Torso.Position).Magnitude < 50 then
+        if v.Name ~= plr.Name and v.Character and v.Character:FindFirstChild("Basketball") and not plr.Character:FindFirstChild("Basketball") and (plr.Character.Torso.Position - v.Character.Torso.Position).Magnitude < 25 then
             local mag = (plr.Character.Torso.Position - v.Character.Torso.Position).Magnitude
             if dist > mag then
                 dist = mag
